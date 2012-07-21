@@ -1,0 +1,10 @@
+Requirements: 
+
+A HTTP Server (Apache or nginx etc)
+An instance of PHP
+
+Run setup.php after uploading to your Raspberry Pi.
+
+Login with:
+Username: admin
+Password: admin
