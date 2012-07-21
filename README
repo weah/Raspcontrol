@@ -3,6 +3,8 @@ Requirements:
 A HTTP Server (Apache or nginx etc)
 An instance of PHP
 
+Add your HTTP user into the sudoers file (E.g www-data on Apache).
+
 Run setup.php after uploading to your Raspberry Pi.
 
 Login with:
