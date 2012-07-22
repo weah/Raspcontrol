@@ -2,18 +2,18 @@ How to setup Raspcontrol
 Typical Installation Requirements:
 
 OS: Raspbian/Debian Wheezy
-		HTTP: Apache 2 (sudo apt-get install apache2)
-		Language: PHP-5 (sudo apt-get install php5)
+HTTP: Apache 2 (sudo apt-get install apache2)
+Language: PHP-5 (sudo apt-get install php5)
 	
 How to setup
-	
-		Upload everything within the .ZIP file you have downloaded from GitHub into a folder called raspcontrol within your web accessible directory (Apaches Default is located in /var/www).
+
+Upload everything within the .ZIP file you have downloaded from GitHub into a folder called raspcontrol within your web accessible directory (Apaches Default is located in /var/www).
 		
-		You must add www-data on Apache (or your HTTP user on another HTTP Server) to your sudoers file, which means they can run Superuser Commands, to do this from the shell type 'sudo visudo' scroll to the bottom of the file and on the last line add: www-data ALL=(ALL) NOPASSWD: ALL.
+You must add www-data on Apache (or your HTTP user on another HTTP Server) to your sudoers file, which means they can run Superuser Commands, to do this from the shell type 'sudo visudo' scroll to the bottom of the file and on the last line add: www-data ALL=(ALL) NOPASSWD: ALL.
 		
-		If you're accessing Apaches web directory on your Raspberry Pi (using startx) you can navigate to http://localhost/raspcontrol, if you're accessing it from another computer on your Network you will need to navigate to http://your.iternal.ip/raspcontrol.
+If you're accessing Apaches web directory on your Raspberry Pi (using startx) you can navigate to http://localhost/raspcontrol, if you're accessing it from another computer on your Network you will need to navigate to http://your.iternal.ip/raspcontrol.
 				
-		Once you can see a login screen you have successfully uploaded Raspcontrol to your Raspberry Pi, now you need to navigate to raspcontrol/setup.php, this will create the initial user to login to the system, the default credentials to login are: Username: admin Password: admin
+Once you can see a login screen you have successfully uploaded Raspcontrol to your Raspberry Pi, now you need to navigate to raspcontrol/setup.php, this will create the initial user to login to the system, the default credentials to login are: Username: admin Password: admin
 		
 		
 Further Information
