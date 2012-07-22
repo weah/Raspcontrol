@@ -1,11 +1,12 @@
 Requirements: 
 
-A HTTP Server (Apache or nginx etc)
-An instance of PHP
+OS: Raspbian/Debian Wheeze
+HTTP: Apache2 is reccomended although any will work fine. (sudo apt-get install apache2)
+Language Dependancies: PHP5 (sudo apt-get install php5
 
-Add your HTTP user into the sudoers file (E.g www-data on Apache).
+Upload everything within the .ZIP file you downloaded from GitHub into a folder called raspcontrol within your web accessible directory (Apaches Default is location is /var/www
 
-Run setup.php after uploading to your Raspberry Pi.
+If you're accessing Apaches web directory on your Raspberry Pi (using startx) you can navigate to http://localhost/raspcontrol/instructions, if you're accessing it from another computer on your Network you will need to navigate to http://your.iternal.ip/raspcontrol/instructions.
 
 Login with:
 Username: admin
