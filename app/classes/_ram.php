@@ -14,7 +14,7 @@
 				 echo '<br/><div class="graph"><strong class="barGreen" style="width:'.$percentage.'%;">'.$percentage.'%</strong></div> &nbsp; &nbsp;  <div class="clear"></div>'; 
 			}
 		    
-		    echo "<br/>Free: <strong>".$free." MB</strong> Used: <strong>" . $used . " MB</strong> &middot Total: <strong>" . $total." MB</strong><br/></div>";
+		    echo "<br/>Free: <strong>". ($free + $buffers + $cached) ." MB</strong> Used: <strong>" . ($used - $buffers - $cached) . " MB</strong> &middot Total: <strong>" . $total." MB</strong><br/></div>";
 	
 		}
 
