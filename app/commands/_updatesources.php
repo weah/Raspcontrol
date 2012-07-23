@@ -9,4 +9,5 @@ $last_line = system('sudo apt-get update', $retval);
 // Printing additional info
 echo '
 </pre>'; ?>
-Source Update Complete!
+Source Update Complete!<br/>
+<a href="<?php echo $_SERVER['HTTP_REFERER']; ?>">Return To Previous Page</a>
