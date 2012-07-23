@@ -10,12 +10,18 @@ if($_SESSION['username'] == ""){
 <?php 	
 	require('app/classes/_ram.php'); 
 	require('app/classes/_hdd.php'); 
+	require('app/classes/_uptime.php'); 
 	require('app/includes/_header.php'); 
 ?>
 
     <div id="firstBlockContainer">
         <div class="firstBlockWrapper">
 
+	        <?php $load = new cpuLoad; $getLoad = $load->getCpuLoad();?>
+        	
+        	<div class="clear"></div>
+        	
+        	<br/><br/>
         	
         	<?php $ram = new ramPercentage; $percentage = $ram->freeMemory(); $percentage = $ram->freeSwap();?>
         	

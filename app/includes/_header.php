@@ -24,7 +24,8 @@
 					
 					<div style="text-align: right; color: #FFFFFF; font-family: Arial; font-size: 14px; float: right; width:500px;">
 		                Hostname: <strong><?php echo gethostname(); ?></strong> &middot; Internal IP: <strong><?php echo $_SERVER['SERVER_ADDR']; ?></strong><br>
-		                Accessed From: <strong><?php echo $_SERVER['SERVER_NAME']; ?></strong> &middot; Port <strong><?php echo $_SERVER['SERVER_PORT']; ?></strong> &middot; System: <strong><?php echo $_SERVER['SERVER_SOFTWARE']; ?></strong>
+		                Accessed From: <strong><?php echo $_SERVER['SERVER_NAME']; ?></strong> &middot; Port <strong><?php echo $_SERVER['SERVER_PORT']; ?></strong> &middot; System: <strong><?php echo $_SERVER['SERVER_SOFTWARE']; ?></strong><br/><br/>
+		               
 		            </div>
 					
 				<?php }

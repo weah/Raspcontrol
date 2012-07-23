@@ -1,7 +1,7 @@
 <?php
 	class ramPercentage {
 		function freeMemory(){
-			echo "<div style='float:left'>Memory:";
+			echo "<div style='float:left'><img src='app/images/memory.png' align='middle'> Memory:";
 		    exec('free -mo', $out);
 		    preg_match_all('/\s+([0-9]+)/', $out[1], $matches);
 		    list($total, $used, $free, $shared, $buffers, $cached) = $matches[1];
@@ -19,7 +19,7 @@
 		}
 
 		function freeSwap(){
-			echo "<div style='margin-left: 30px; float:left'>Swap:";
+			echo "<div style='margin-left: 30px; float:left'><img src='app/images/swap.png' align='middle'> Swap:";
 		    exec('free -mo', $out);
 		    preg_match_all('/\s+([0-9]+)/', $out[2], $matches);
 		    list($total, $used, $free) = $matches[1];

@@ -1,7 +1,7 @@
 <?php
 	class hddPercentage {
 		function freeStorage(){
-			echo "<div style='float:left'>SD Card:";
+			echo "<div style='float:left'><img src='app/images/sd.png' align='middle'> SD Card:";
 
 				    
 			    $bytes = disk_free_space("."); 
