@@ -10,7 +10,7 @@ if($_SESSION['username'] == ""){
 <?php 	
 	require('app/classes/_ram.php'); 
 	require('app/classes/_hdd.php'); 
-	require('app/classes/_uptime.php'); 
+	require('app/classes/_cpu.php'); 
 	require('app/includes/_header.php'); 
 ?>
 
@@ -39,12 +39,6 @@ if($_SESSION['username'] == ""){
         	<center>
         		Mission Control:<br/><br/> 
         		<button onclick="rebootWarn()" class="minimal" value="Test">Reboot Rasberry Pi</button> <a href="app/commands/_updatesources.php"><button class="minimal"value="Test">Update Sources</button></a>
-        		
-        		<!-- <br/><br/><br/>
-        		
-        		 <form action="app/commands/_command.php" method="post";>
-					<input class="loginForm" type="text" name="command">
-				<button class="minimal" value="Test">Run Command</button> -->
         	</center>
         	
        	</div>
