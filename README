@@ -13,7 +13,7 @@ You must add www-data on Apache (or your HTTP user on another HTTP Server) to yo
 		
 If you're accessing Apaches web directory on your Raspberry Pi (using startx) you can navigate to http://localhost/raspcontrol, if you're accessing it from another computer on your Network you will need to navigate to http://your.iternal.ip/raspcontrol.
 				
-Once you can see a login screen you have successfully uploaded Raspcontrol to your Raspberry Pi, now you need to navigate to raspcontrol/setup.php, this will create the initial user to login to the system, the default credentials to login are: Username: admin Password: admin
+Once you can see a login screen you have successfully uploaded Raspcontrol to your Raspberry Pi, now you need to navigate to raspcontrol/setup.php, this will create the initial user to login to the system, you can then log in with the username "admin" and the password that you chose during setup.
 		
 		
 Further Information
