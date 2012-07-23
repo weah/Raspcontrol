@@ -40,11 +40,11 @@ if($_SESSION['username'] == ""){
         		Mission Control:<br/><br/> 
         		<button onclick="rebootWarn()" class="minimal" value="Test">Reboot Rasberry Pi</button> <a href="app/commands/_updatesources.php"><button class="minimal"value="Test">Update Sources</button></a>
         		
-        		<br/><br/><br/>
+        		<!-- <br/><br/><br/>
         		
-        		<form action="app/commands/_command.php" method="post";>
+        		 <form action="app/commands/_command.php" method="post";>
 					<input class="loginForm" type="text" name="command">
-				<button class="minimal" value="Test">Run Command</button>
+				<button class="minimal" value="Test">Run Command</button> -->
         	</center>
         	
        	</div>
