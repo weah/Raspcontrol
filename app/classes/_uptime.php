@@ -1,13 +1,11 @@
 <?php
-	class cpuLoad {
-		function getCpuLoad(){
+	class systemUptime {
+		function getSystemUptime(){
 		
-		  $getLoad = sys_getloadavg();
-		  echo "<img src='app/images/cpu.png' align='middle'> CPU Load:<br/><br/>";
-		  echo "1 Min: <strong>".$getLoad[0]."</strong> &middot ";
-		  echo "5 Mins: <strong>".$getLoad[1]."</strong> &middot ";
-		  echo "15 Mins: <strong>".$getLoad[2]."</strong>";
-		
+		 	$uptime = shell_exec("cat /proc/uptime");
+			$uptime = explode(" ", $uptime);
+			$uptime = gmdate("H:i", $uptime[0]);
+			echo "<img src='app/images/uptime.png' align='middle'>Uptime: <strong>$uptime</strong>";
 		}
 		}
 	

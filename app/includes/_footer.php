@@ -3,8 +3,12 @@
             Powered by <a href="https://github.com/Bioshox/Raspcontrol" target="_blank">Raspcontrol</a> 
             
             <?php
+            
+            require('app/classes/_versionCheck.php'); 
+            
             if($_SESSION['username'] == ""){}else{
-	            echo '&middot; <a href="app/classes/_logout.php">Logout</a>';
+	            echo '&middot; <a href="app/classes/_logout.php">Logout</a><br/><br/>';
+				$versionCheck = new versionCheck; $checkVersion = $versionCheck->checkVersion();
             }
             ?>
             

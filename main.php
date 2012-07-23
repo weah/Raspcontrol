@@ -11,11 +11,18 @@ if($_SESSION['username'] == ""){
 	require('app/classes/_ram.php'); 
 	require('app/classes/_hdd.php'); 
 	require('app/classes/_cpu.php'); 
+	require('app/classes/_uptime.php'); 
 	require('app/includes/_header.php'); 
 ?>
 
     <div id="firstBlockContainer">
         <div class="firstBlockWrapper">
+
+			<?php $uptime = new systemUptime; $getSystemUptime = $uptime->getSystemUptime();?>
+        	
+        	<div class="clear"></div>
+        	
+        	<br/><br/>
 
 	        <?php $load = new cpuLoad; $getLoad = $load->getCpuLoad();?>
         	
