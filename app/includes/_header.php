@@ -1,6 +1,6 @@
 <?php
 session_start();
-$uptime = system("cat /proc/uptime");
+$uptime = shell_exec("cat /proc/uptime");
 $uptime = explode(" ", $uptime);
 $uptime = gmdate("H:i", $uptime[0]);
 ?>
