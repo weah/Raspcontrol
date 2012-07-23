@@ -1,8 +1,6 @@
 <?php
 	class hddPercentage {
 		function freeStorage(){
-			echo "<div style='float:left'><img src='app/images/sd.png' align='middle'> SD Card:";
-
 				    
 			    $bytes = disk_free_space("."); 
 			    $si_prefix = array( 'B', 'KB', 'MB', 'GB', 'TB', 'EB', 'ZB', 'YB' );
@@ -22,7 +20,19 @@
 				
 				$used = $total - $free;
 				$percentage = round($used / $total * 100);
-				echo '<br/><div class="graph"><strong class="barGreen" style="width:'.$percentage.'%;">'.$percentage.'%</strong></div> &nbsp; &nbsp;  <div class="clear"></div>'; 
+				
+				
+				if($percentage > '80'){
+				echo '
+				<div style="float:left"><img src="app/images/sd.png" align="middle"> SD Card <font color="red"> (Warning)</font>:
+				<br/><br/><div class="graph"><strong class="barGreen" style="width:'.$percentage.'%;">'.$percentage.'%</strong></div> &nbsp; &nbsp;  <div class="clear"></div>; '; 
+			}else{
+				 echo '
+				 <div style="float:left"><img src="app/images/sd.png" align="middle"> SD Card <font color="green"> (OK)</font>:
+				 <br/><div class="graph"><strong class="barGreen" style="width:'.$percentage.'%;">'.$percentage.'%</strong></div> &nbsp; &nbsp;  <div class="clear"></div>'; 
+			}
+				
+				
 				echo "<br/>Total: <strong>".$total."</strong> GB &middot ";
 				echo "Free: <strong>".$free."</strong> GB";
 				echo "</div>";
