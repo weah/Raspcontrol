@@ -1,6 +1,6 @@
 <div id="footerContainer">
         <div class="footerWrapper">
-            Powered by <a href="https://github.com/Bioshox/Raspcontrol" target="_blank">Raspcontrol</a> (<!--<a href="settings.php">Settings</a>-->) &middot; <a href="http://fusionstrike.com">Fusion Strike</a> 
+            Powered by <a href="https://github.com/Bioshox/Raspcontrol" target="_blank">Raspcontrol</a> 
             
             <?php
             if($_SESSION['username'] == ""){}else{
