@@ -6,7 +6,7 @@
 		    preg_match_all('/\s+([0-9]+)/', $out[1], $matches);
 		    list($total, $used, $free, $shared, $buffers, $cached) = $matches[1];
 
-			$percentage = round($used / $total * 100);
+			$percentage = round(($used - $buffers - $cached) / $total * 100);
 		
 			if($percentage > '80'){
 				echo '<br/><div class="graph"><strong class="barAmber" style="width:'.$percentage.'%;">'.$percentage.'%</strong></div> &nbsp; &nbsp;  <div class="clear"></div>'; 
