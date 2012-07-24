@@ -10,7 +10,7 @@ if ($_POST['password']) {
     $myFile = "/etc/raspcontrol/database.aptmnt";
     $fh = fopen($myFile, 'w') or die("can't open file");
     $stringData = '{
-        "user":		"admin", 
+        "user":		"' . $_POST['username'] .'", 
         "password":	"' . $_POST['password'] .'"
     }';
     fwrite($fh, $stringData); 
@@ -19,11 +19,27 @@ if ($_POST['password']) {
 
 ?>
 
-<form method="post" action="<?php echo $PHP_SELF; ?>">
-Password:<input type="password" size="12" maxlength="32" name="password"><br />
-<input type="submit" value="submit" name="submit"><br />
-</form>
 
+
+
+<?php require('app/includes/_header.php'); ?>
+<div id="firstBlockContainer">
+        <div class="firstBlockWrapper">
+        	<strong>Raspcontrol Installation</strong>
+		<br/><br/>	
+			<center>Please choose a username and password to login with<br/><br/>
+	        	<form method="post" action="<?php echo $PHP_SELF; ?>">
+	        		<input type="text" name="username" class="loginForm" onfocus="if(this.value == 'Username') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Username';}" value="Username">
+	        		<input type="password" name="password" class="loginForm" onfocus="if(this.value == 'Password') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Password';}" value="Password"><br/>
+	        		<input type="submit" value="Create Account" name="submit" class="minimal">
+	        		
+	        		
+	        		</center>
+			<br/><br/><br/><br/>
+			</form>
+		</div>
+</div>
+<?php require('app/includes/_footer.php'); ?>
 <?php
 }
 ?>
