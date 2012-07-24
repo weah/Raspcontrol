@@ -1,7 +1,7 @@
 <?php
 	class versionCheck {
 		function checkVersion(){
-		    $version = "1.1"; //Version of the script, to check against CSV
+		    $version = "1.2"; //Version of the script, to check against CSV
 		    $critical = FALSE; //Set Critical Variable to False 
 		    $update = FALSE; //Set None Critical to Fasle too
 		    $url = "http://fusionstrike.com/raspcontrol/version.csv"; //Link to your external CSV to check against
