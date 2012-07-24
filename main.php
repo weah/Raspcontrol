@@ -45,11 +45,11 @@ if($_SESSION['username'] == ""){
         	
         	<center>
         		Mission Control:<br/><br/> 
-        		<button onclick="rebootWarn()" class="minimal" value="Test">Reboot Rasberry Pi</button> <a href="app/commands/_updatesources.php"><button class="minimal" value="Test">Update Sources</button></a>
+        		<button onclick="rebootWarn()" class="minimal">Reboot Rasberry Pi</button> <a href="app/commands/_updatesources.php"><button class="minimal">Update Sources</button></a>
                 
                 <?php
                 if (file_exists("/usr/bin/rpi-update")) {
-                    echo "<a href=\"app/commands/_updatefirmware.php\"><button class=\"minimal\" value=\"Test\">Update Firmware</button></a>";
+                    echo "<a href=\"app/commands/_updatefirmware.php\"><button class=\"minimal\">Update Firmware</button></a>";
                 }
                 ?>
                 
